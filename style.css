@@ -1,0 +1,1396 @@
+/* Шрифты */
+
+@font-face 
+{
+    font-family: MenuFont;
+    src: url('fonts/RubikDoodleShadow-Regular.ttf');
+}
+
+@font-face 
+{
+    font-family: HeadersFont;
+    src: url('fonts/Exo2-VariableFont_wght.ttf');
+}
+
+@font-face 
+{
+    font-family: ParagraphFont;
+    src: url('fonts/Epilogue-VariableFont_wght.ttf');
+}
+
+/* глобальные параметры */
+
+.section
+{
+    max-width: 1440px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    width: -webkit-fill-available;
+}
+
+.page
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul
+{
+    margin: 0;
+    padding: 0;
+}
+
+ul li 
+{
+    list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: HeadersFont, sans-serif;
+}
+
+p, a
+{
+    font-family: ParagraphFont;
+}
+
+hr
+{
+    border-width: 4px;
+    border-color: black;
+    margin: 0;
+}
+
+/* Блок с полоской информации */
+
+.info
+{
+    background-color: #4e5457;
+}
+
+.info .info_div 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info p
+{
+    color: white;
+}
+
+.info a
+{
+    text-decoration: none;
+    font-family: ParagraphFont;
+    color: white;
+}
+
+.info .right_info
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    column-gap: 4rem;
+    flex-grow: 5;
+}
+
+.info .right_info a
+{
+    text-align: center;
+    flex-grow: 1;
+}
+
+.info .left_info
+{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Меню */
+.menu 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15rem;
+}
+
+.menu .logo 
+{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.menu .menu_elements
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 2rem;
+    padding: 1rem;
+}
+
+.menu .menu_elements ul li 
+{
+    display: inline;
+    list-style: none;
+    margin-right: 1rem;
+}
+
+.menu .menu_elements ul li a
+{
+    text-decoration: none;
+    font-family: MenuFont;
+    font-size: 16pt;
+}
+
+.menu .menu_elements li
+{
+    position: relative;
+}
+
+.menu .menu_elements li:hover .submenu_elements 
+{
+    display: flex;
+}
+
+.menu .menu_elements .submenu_elements 
+{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    background-color: whitesmoke;
+    border: 3px solid #33bee5;
+    border-radius: 6px;
+}
+
+.menu .menu_elements .submenu_elements li 
+{
+    display: block;
+    padding: 0.6rem;
+}
+
+.menu .menu_elements .submenu_elements li a 
+{
+    font-size: 14pt;
+    white-space: nowrap;
+}
+
+.menu .menu_elements .submenu_elements li:hover 
+{
+    background-color: #d6f6ff;
+}
+
+.menu .menu_elements .submenu_elements > li.show > a:after 
+{
+    content: " ► ";
+}
+
+.menu .menu_elements .submenu_elements > li.show:hover > a:after 
+{
+    content: " ▼ ";
+}
+
+
+
+.menu .menu_elements .submenu_elements li
+{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+.menu .menu_elements .submenu_elements li:hover .submenu_elements_2 
+{
+    display: block;
+}
+
+.menu .menu_elements .submenu_elements .submenu_elements_2
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: whitesmoke;
+    border: 3px solid #33bee5;
+    border-radius: 6px;
+}
+
+.menu .menu_elements .submenu_elements .submenu_elements_2 li 
+{
+    padding: 0.6rem;
+    margin: 0;
+    width: max-content;
+    display: block;
+}
+
+.menu .menu_elements .submenu_elements .submenu_elements_2 li a 
+{
+    font-size: 14pt;
+}
+
+.menu .menu_elements .submenu_elements .submenu_elements_2 li:hover 
+{
+    background-color: #d6f6ff;
+}
+
+/* Компактное меню */
+
+.compact_menu 
+{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 15rem;
+}
+
+.compact_menu .logo 
+{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.compact_menu .menu_elements ul li a
+{
+    text-decoration: none;
+    font-family: MenuFont;
+    font-size: 16pt;
+}
+
+/* Кнопка МЕНЮ */
+
+.compact_menu{
+    display: none;
+}
+
+.compact_menu .menu_elements li
+{
+    position: relative;
+}
+
+.compact_menu .menu_elements li:hover .submenu_elements_main 
+{
+    display: flex;
+}
+
+.compact_menu .menu_elements .submenu_elements_main 
+{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: whitesmoke;
+    border: 3px solid #33bee5;
+    border-radius: 6px;
+}
+
+.compact_menu .menu_elements .submenu_elements_main li 
+{
+    display: block;
+    padding: 0.6rem;
+}
+
+.compact_menu .menu_elements .submenu_elements_main li a 
+{
+    font-size: 14pt;
+    white-space: nowrap;
+}
+
+.compact_menu .menu_elements .submenu_elements_main li:hover 
+{
+    background-color: #d6f6ff;
+}
+
+.compact_menu .menu_elements .submenu_elements_main > li.show > a:after 
+{
+    content: " ► ";
+}
+
+.compact_menu .menu_elements .submenu_elements_main > li.show:hover > a:after 
+{
+    content: " ▼ ";
+}
+
+.compact_menu .menu_elements .submenu_elements_main li
+{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+.compact_menu .menu_elements .submenu_elements_main li:hover .submenu_elements
+{
+    display: block;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: whitesmoke;
+    border: 3px solid #33bee5;
+    border-radius: 6px;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li 
+{
+    padding: 0.6rem;
+    margin: 0;
+    width: max-content;
+    display: block;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li a 
+{
+    font-size: 14pt;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li:hover 
+{
+    background-color: #d6f6ff;
+}
+
+/* Подменю */
+
+.compact_menu .menu_elements .submenu_elements_main ul li 
+{
+    display: inline;
+    list-style: none;
+}
+
+.compact_menu .menu_elements .submenu_elements_main li
+{
+    position: relative;
+}
+
+.compact_menu .menu_elements .submenu_elements_main li:hover .submenu_elements 
+{
+    display: flex;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements 
+{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: whitesmoke;
+    border: 3px solid #33bee5;
+    border-radius: 6px;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li 
+{
+    display: block;
+    padding: 0.6rem;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li a 
+{
+    font-size: 14pt;
+    white-space: nowrap;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li:hover 
+{
+    background-color: #d6f6ff;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements > li.show > a:after 
+{
+    content: " ► ";
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements > li.show:hover > a:after 
+{
+    content: " ▼ ";
+}
+
+
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li
+{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements li:hover .submenu_elements_2 
+{
+    display: block;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements .submenu_elements_2
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: whitesmoke;
+    border: 3px solid #33bee5;
+    border-radius: 6px;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements .submenu_elements_2 li 
+{
+    padding: 0.6rem;
+    margin: 0;
+    width: max-content;
+    display: block;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements .submenu_elements_2 li a 
+{
+    font-size: 14pt;
+}
+
+.compact_menu .menu_elements .submenu_elements_main .submenu_elements .submenu_elements_2 li:hover 
+{
+    background-color: #d6f6ff;
+}
+
+
+/* Секция с картинкой */
+.da
+{
+    margin: 0;
+    padding: 0;
+}
+
+input
+{
+    display: none;
+}
+
+label
+{
+    border: 3px solid #33bee5;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+#lbl_1
+{
+    animation: changeInput1 10s infinite;
+}
+
+#lbl_2
+{
+    animation: changeInput2 10s infinite;
+}
+
+#lbl_3
+{
+    animation: changeInput3 10s infinite;
+}
+
+.kartinka
+{
+    background-repeat: no-repeat;
+    background-image: url("./src/img/first_img/bg.png");
+    background-size: cover;
+    background-position: center top;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    animation: changeBgImage 10s infinite;
+}
+
+@keyframes changeBgImage {
+    0%,
+    10%,
+    100% {
+      background-image: url('./src/img/first_img/bg.png');
+      animation-timing-function: ease-in;
+    }
+  
+    20%,
+    30%,
+    40%,
+    50% {
+      background-image: url('./src/img/first_img/slider-bg-1.png');
+      animation-timing-function: ease-in;
+    }
+  
+    60%,
+    70%,
+    80%,
+    90% {
+      background-image: url('./src/img/first_img/slider-bg-2.png');
+      animation-timing-function: ease-in;
+    }
+  }
+
+  @keyframes changeInput1 {
+    0%,
+    10%,
+    100% {
+      background-color: #33bee5;
+      color: white;
+      animation-timing-function: ease-in;
+    }
+  
+    20%,
+    30%,
+    40%,
+    50% {
+          background-color: white;
+          color: black;
+          animation-timing-function: ease-in;
+    }
+  
+    60%,
+    70%,
+    80%,
+    90% {
+        background-color: white;
+        color: black;
+        animation-timing-function: ease-in;
+    }
+  }
+
+  @keyframes changeInput2 {
+    0%,
+    10%,
+    100% {
+      background-color: white;
+      color: black;
+      animation-timing-function: ease-in;
+    }
+  
+    20%,
+    30%,
+    40%,
+    50% {
+          background-color: #33bee5;
+          color: white;
+          animation-timing-function: ease-in;
+    }
+  
+    60%,
+    70%,
+    80%,
+    90% {
+        background-color: white;
+        color: black;
+        animation-timing-function: ease-in;
+    }
+  }
+
+  @keyframes changeInput3 {
+    0%,
+    10%,
+    100% {
+        background-color: white;
+        color: black;
+      animation-timing-function: ease-in;
+    }
+  
+    20%,
+    30%,
+    40%,
+    50% {
+        background-color: white;
+        color: black;
+          animation-timing-function: ease-in;
+    }
+  
+    60%,
+    70%,
+    80%,
+    90% {
+          background-color: #33bee5;
+          color: white;
+        animation-timing-function: ease-in;
+    }
+  }
+
+  .da:hover
+  {
+    .kartinka{
+        animation: none;
+        overflow: hidden;
+        position: relative;
+        transition: background-image 0.5s ease;
+    }
+
+    #lbl_1, #lbl_2, #lbl_3
+    {
+        animation: none;
+    }
+  }
+
+#slide1:checked ~ .kartinka {
+    background-image: url('./src/img/first_img/bg.png');    
+}
+
+#slide2:checked ~ .kartinka {
+    background-image: url('./src/img/first_img/slider-bg-1.png');
+}
+
+#slide3:checked ~ .kartinka {
+    background-image: url('./src/img/first_img/slider-bg-2.png');
+}
+
+#slide1:checked ~ #lbl_1 {
+    color: white;
+    background-color: #33bee5;
+}
+
+#slide2:checked ~ #lbl_2 {
+    color: white;
+    background-color: #33bee5;
+}
+
+#slide3:checked ~ #lbl_3 {
+    color: white;
+    background-color: #33bee5;
+}
+
+.kartinka p
+{
+    font-family: ParagraphFont;
+    color: white;
+    margin: 0;
+}
+
+.kartinka .its p
+{
+    font-size: 20pt;
+}
+
+.kartinka .beautiful p
+{
+    margin-top: 0.5rem;
+    font-size: 60pt;
+}
+
+.kartinka .make p
+{
+    margin-top: 1rem;
+    font-size: 16pt;
+}
+
+.kartinka .click a
+{
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-size: 12pt;
+    
+    font-family: ParagraphFont;
+    color: white;
+}
+
+/* Секция функций */
+
+.functions
+{
+    margin-top: 1rem;
+}
+
+.functions .func
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+.functions .func .znachok
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.functions .func .znachok img
+{
+    width: auto;
+    height: 60px;
+}
+
+.functions .func p
+{
+    font-size: 10pt;
+}
+
+.functions .func a
+{
+    text-decoration: none;
+    font-size: 10pt;
+    color: #33bee5;
+}
+
+/* секция входа */
+
+.signUp
+{
+    margin-top: 1rem;
+}
+
+.signUp .sign
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 9rem;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+}
+
+.signUp .sign .left_content
+{
+    margin-left: 1rem;
+}
+
+.signUp .sign .right_content
+{
+    margin-right: 1rem;
+    border: 1px solid #33bee5;
+    border-radius: 5px;
+    background-color: #33bee5;
+    text-align: center;
+    width: 15%;
+    padding: 0.5rem;
+}
+
+.signUp .sign h3
+{
+    font-size: 12pt;
+}
+
+.signUp .sign p
+{
+    font-size: 10pt;
+}
+
+.signUp .sign a
+{   
+    text-decoration: none;
+    font-size: 12pt;
+    color: white;
+}
+
+/* Отзывы */
+
+.testimonials
+{
+    margin-top: 1rem;
+}
+
+.testimonials .main_otziv
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.testimonials .main_otziv .otziv
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.testimonials .main_otziv .otziv .znachok_otziv
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.testimonials .main_otziv .otziv .znachok_otziv img
+{
+    width: auto;
+    height: 60px;
+}
+
+.testimonials .main_otziv .otziv_title
+{
+    margin-top: 1rem;
+    background-color: #33bee5;
+    border-radius: 3px;
+    padding: 0.3rem;
+}
+
+.testimonials .main_otziv .otziv_title h3
+{
+    margin: 0;
+    color: white;
+}
+
+.testimonials .main_otziv .otziv address
+{
+    color: #33bee5;
+}
+
+/* Наши навыки */
+
+.ourSkills
+{
+    margin-top: 1rem;
+}
+
+.ourSkills .sk
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ourSkills .sk .skills_title
+{
+    margin-top: 1rem;
+    background-color: #33bee5;
+    border-radius: 3px;
+    padding: 0.3rem;
+}
+
+.ourSkills .sk .skills_title h3
+{
+    margin: 0;
+    color: white;
+}
+
+.ourSkills .sk .elem
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+/* Последние посты */
+
+.lastestPosts
+{
+    margin-top: 1rem;
+}
+
+.lastestPosts .lp
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.lastestPosts .lp .post_title
+{
+    margin-top: 1rem;
+    background-color: #33bee5;
+    border-radius: 3px;
+    padding: 0.3rem;
+}
+
+.lastestPosts .lp .post_title h3
+{
+    margin: 0;
+    color: white;
+}
+
+.lastestPosts .lp .elem
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.lastestPosts .lp .elem .post_elem
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.lastestPosts .lp .elem .post_elem img
+{
+    width: auto;
+    height: 150px;
+}
+
+.lastestPosts .lp p
+{
+    font-size: 10pt;
+}
+
+.lastestPosts .lp h4
+{
+    margin-top: 0;
+}
+
+/* О нас */
+
+.aboutUs
+{
+    background-color: rgb(241, 241, 241);
+    padding-bottom: 1rem;
+}
+
+.aboutUs .about
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    justify-content: space-between;
+}
+
+.aboutUs .about .left_content
+{
+    width: 25%;
+}
+
+.aboutUs .about .right_content
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.aboutUs .about .left_content p
+{
+    font-size: 10pt;
+}
+
+.aboutUs .about .right_content p
+{
+    font-size: 10pt;
+}
+
+.aboutUs .about .right_content .add_img_column
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.aboutUs .about .right_content .add_img
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+}
+
+.aboutUs .about .right_content .add_img img
+{
+    width: auto;
+    height: 60px;
+}
+
+.aboutUs .about .right_content .only_image
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+}
+
+.aboutUs .about .right_content .only_image .only_image_column
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.aboutUs .about .right_content .only_image .only_image_column img
+{
+    width: auto;
+    height: 60px;
+}
+
+/* Другое */
+
+.ather 
+{
+    background-color: #414246;
+}
+
+.ather .ather
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 10rem;
+}
+
+.ather .ather h4
+{
+    color: white;
+}
+
+.ather .ather p
+{
+    color: white;
+    font-size: 8pt;
+}
+
+/* Копирайт */
+
+.copyright 
+{
+    background-color: #303030;
+}
+
+.copyright .copy
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 36rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright .copy h4
+{
+    color: white;
+}
+
+.copyright .copy p
+{
+    color: whitesmoke;
+    font-size: 8pt;
+}
+
+.copyright .copy a
+{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 8pt;
+    margin-right: 1rem;
+}
+
+/* Медиа запросы для адаптива */
+
+@media (max-width: 1024px) {
+    .info .info_div {
+        column-gap: 5rem;
+    }
+
+    .copyright .copy {
+        column-gap: 0;
+    }
+
+    .lastestPosts .lp .elem {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}
+
+@media (max-width: 970px) {
+
+    .menu .menu_elements ul li a{
+        font-size: 15px;
+    }
+
+    .menu .menu_elements .submenu_elements li a{
+        font-size: 15px;
+    }
+
+    .menu .menu_elements .submenu_elements .submenu_elements_2 li a{
+        font-size: 15px;
+    }
+
+    .aboutUs .about {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .aboutUs .about .left_content {
+        width: 100%;
+    }
+
+    .aboutUs .about .right_content {
+        display: flex;
+        flex-direction: row;
+        column-gap: 1rem;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 830px) {
+    .info p {
+        font-size: 10pt;
+    }
+
+    .info .right_info a {
+        font-size: 10pt;
+    }
+
+    .functions .func {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        row-gap: 1rem;
+    }
+
+    .signUp .sign {
+        column-gap: 1rem;
+    }
+
+    .signUp .sign .right_content {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .info .info_div {
+        flex-wrap: wrap;
+    }
+    
+    .menu {
+        display: none;
+    }
+
+    .compact_menu {
+        display: flex;
+    }
+
+    .kartinka .its p{
+        font-size: 20pt;
+    }
+
+    .kartinka .beautiful p{
+        font-size: 50pt;
+    }
+
+    .signUp .sign {
+        flex-direction: column;
+        column-gap: 0;
+    }
+
+    .signUp .sign .right_content {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    .testimonials .main_otziv .otziv {
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    .ather .ather {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 1rem;
+    }
+}
+
+@media (max-width: 650px) {
+    .compact_menu .menu_elements ul li a {
+        font-size: 12pt;
+    }
+
+    .compact_menu .menu_elements .submenu_elements_main li a {
+        font-size: 12pt;
+        white-space:normal;
+    }
+
+    .compact_menu .menu_elements .submenu_elements_main .submenu_elements li a {
+        font-size: 12pt;
+        white-space: normal;
+    }
+
+    .compact_menu .menu_elements .submenu_elements_main .submenu_elements .submenu_elements_2 li a {
+        font-size: 12pt;
+        white-space: normal;
+    }
+
+    .compact_menu {
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media (max-width: 550px) {
+    
+    .compact_menu {
+        flex-wrap: nowrap;
+        column-gap: 10rem;
+    }
+
+    .compact_menu .menu_elements .submenu_elements_main .submenu_elements .submenu_elements_2 li {
+        width: fit-content;
+    }
+    
+    .lastestPosts .lp .elem .post_elem {
+        flex-direction: column;
+        row-gap: 1rem;
+        align-items: normal;
+    }
+
+    .ather .ather {
+        flex-direction: column;
+        row-gap: 0;
+    }
+
+    .copyright .copy {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 425px) {
+    .info .right_info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 0.5rem;
+    }
+
+    .compact_menu {
+        flex-wrap: nowrap;
+        column-gap: 5rem;
+    }
+
+    .kartinka .its p{
+        font-size: 20pt;
+    }
+
+    .kartinka .beautiful p{
+        font-size: 30pt;
+    }
+
+    .kartinka .make p {
+        font-size: 14pt;
+    }
+
+    .kartinka .click a {
+        font-size: 10pt;
+    }
+
+    .signUp .sign a {
+        font-size: 10pt;
+    }
+
+    .ourSkills .sk .elem {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 375px) 
+{
+    .compact_menu .menu_elements .submenu_elements_main {
+        left: -50%;
+    }
+
+    .testimonials .main_otziv .otziv address {
+        font-size: 12pt;
+    }
+
+    .testimonials .main_otziv .otziv cite {
+        font-size: 10pt;
+    }
+}
+
+
+@media (max-width: 320px) 
+{
+    .compact_menu .menu_elements .submenu_elements_main .submenu_elements li {
+        width: fit-content;
+    }
+
+    .compact_menu .menu_elements .submenu_elements_main {
+        left: -20%;
+    }
+
+    .functions .func .znachok h3{
+        font-size: 12pt;
+    }
+
+    .functions .func .znachok img{
+        height: 35px;
+    }
+
+    .signUp .sign .left_content h3{
+        font-size: 10pt;
+    }
+
+    .signUp .sign .left_content p{
+        font-size: 8pt;
+    }
+
+    .signUp .sign a {
+        font-size: 7pt;
+    }
+
+    .testimonials .main_otziv .otziv_title h3 {
+        font-size: 12pt;
+    }
+
+    .testimonials .main_otziv .otziv .znachok_otziv {
+        flex-direction: column;
+    }
+
+    .ourSkills .sk .skills_title h3 {
+        font-size: 12pt;
+    }
+
+    .ourSkills .sk .elem p{
+        font-size: 10pt;
+    }
+
+    .lastestPosts .lp .post_title h3 {
+        font-size: 12pt;
+    }
+
+    .lastestPosts .lp .elem .post_elem img {
+        height: 100px;
+    }
+
+    .lastestPosts .lp h4 {
+        font-size: 10pt;
+    }
+
+    .lastestPosts .lp p {
+        font-size: 8pt;
+    }
+
+    .copyright .copy p{
+        font-size: 6pt;
+    }
+
+    .copyright .copy .temp{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .copyright .copy .temp a{
+        font-size: 6pt;
+    }
+
+}
